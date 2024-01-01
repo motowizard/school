@@ -1,0 +1,37 @@
+
+{% block content %}
+ <div class="container-fluid">
+        <div class="row" >
+            <div class="col-md-8">
+                <h1 style="color:red; background-color:snow; border:10px solid SlateGray; font-family:Helvetica" align="center" >FM ETERNAL School of ARTS and Science</h1>
+            </div>
+        </div>
+ </div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="md-col-4">
+            <form action="" method="post" class="p-3 shadow">
+            {% csrf_token %}
+                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Enter Username"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Enter Password"></div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success">
+                    <a href="register">Register</a>
+                </div>
+            </form>
+            <div class="col-md-6">
+            <img src="https://www.pafgc.in/images/First-Grade/slider/a-m.jpg" height="100%" width="100%" alt="No image">
+        </div>
+
+
+        </div>
+    </div>
+    <div class="row">
+        {% for msg in messages %}
+        <h4>{{msg}}</h4>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}}
